@@ -1,0 +1,34 @@
+.header-container {
+    background-color: #666666;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+.header-logo {
+    width: 30vw;
+    cursor: pointer;
+}
+.logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+.header-options {
+    display: flex;
+    justify-content: flex-end;
+    width: 50vw;
+}
+
+.header-submenu {
+    display: flex;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.header-submenu-links {
+    text-decoration: none;
+    color: inherit;
+}
