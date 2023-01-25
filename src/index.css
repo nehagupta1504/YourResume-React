@@ -6,6 +6,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #222831;
+    color: #dddddd;
 }
 
 code {
@@ -35,4 +36,125 @@ code {
 
 .padding {
     padding: 1rem;
+}
+
+.section-page {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+    color: #dddddd;
+}
+.section-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+.section-image-parent {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.section-image {
+    background-image: url("./assets/cv_builder.png");
+    width: 90%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section-details_action {
+    margin-top: 2rem;
+    width: 17rem;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.section-details_heading,
+.section-details_call-to-action {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+.section-details_main-heading,
+.section-details_sub-heading {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Media queries for small screen */
+@media only screen and (max-width: 1200px) {
+    .section-image {
+        height: 43%;
+    }
+    .section-image-parent {
+        height: 80vh;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .section-page {
+        grid-auto-flow: row;
+        grid-template-columns: none;
+    }
+    .section-image-parent {
+        width: 100%;
+        max-height: 500px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .section-image {
+        width: 100%;
+        height: -webkit-fill-available;
+    }
+    .section-details_action {
+        width: 10rem;
+    }
+    .section-details_heading {
+        align-items: center;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+    .section-image {
+        background-size: cover;
+    }
+}
+
+/* CSS for form */
+.body-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form .text-field {
+    margin: 1rem 0.5rem;
+}
+.form .input-field {
+    display: block;
+    height: 30px;
+    width: 500px;
+    margin: 8px 0px;
+    border-radius: 10px;
+    background-color: #30475e;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+}
+
+.form .btn {
+    width: 500px;
+    margin: 8px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: bolder;
 }
