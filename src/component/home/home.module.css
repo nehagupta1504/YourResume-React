@@ -2,7 +2,6 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
-    background-color: #222831;
     color: #dddddd;
 }
 .home-details {
@@ -48,5 +47,37 @@
 @media only screen and (max-width: 1200px) {
     .home-image {
         height: 43%;
+    }
+    .home-image-parent {
+        height: 80vh;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .home-page {
+        grid-auto-flow: row;
+        grid-template-columns: none;
+    }
+    .home-image-parent {
+        width: 100%;
+        max-height: 500px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .home-image {
+        width: 100%;
+        height: -webkit-fill-available;
+    }
+    .home-details_action {
+        width: 10rem;
+    }
+    .home-details_heading {
+        align-items: center;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+    .home-image {
+        background-size: cover;
     }
 }
