@@ -1,0 +1,52 @@
+.home-page {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+    background-color: #222831;
+    color: #dddddd;
+}
+.home-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+.home-image-parent {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.home-image {
+    background-image: url("../../assets/cv_builder.png");
+    width: 90%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.home-details_action {
+    margin-top: 2rem;
+    width: 17rem;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.home-details_heading,
+.home-details_call-to-action {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+.home-details_main-heading,
+.home-details_sub-heading {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Media queries for small screen */
+@media only screen and (max-width: 1200px) {
+    .home-image {
+        height: 43%;
+    }
+}

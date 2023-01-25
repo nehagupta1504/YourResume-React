@@ -15,3 +15,23 @@ code {
 .text-area {
     display: flex;
 }
+
+.btn {
+    width: 5rem;
+    height: 36px;
+    border-radius: 12px;
+}
+.btn-dark {
+    background-color: #30475e;
+    color: white;
+    font-weight: 500;
+    border: 1px solid white;
+}
+
+.margin {
+    margin: 1rem;
+}
+
+.padding {
+    padding: 1rem;
+}
