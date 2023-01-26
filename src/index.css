@@ -135,6 +135,9 @@ code {
     margin: 1rem 0.5rem;
     align-items: center;
     justify-content: flex-start;
+    width: 0;
+    flex: 1;
+    min-width: fit-content;
 }
 
 .form .text-field {
@@ -149,6 +152,9 @@ code {
     background-color: #30475e;
     border: none;
     border-bottom: 1px solid #dddddd;
+    color: #dddddd;
+    font-weight: bolder;
+    padding: 0px 1rem;
 }
 
 .form .btn {
@@ -157,4 +163,33 @@ code {
     height: 44px;
     font-size: 20px;
     font-weight: bolder;
+}
+.form-container {
+    display: flex;
+    flex: 1;
+}
+
+.preview {
+    background-color: #dddddd;
+    flex: 1;
+    border: 16px solid #30475e;
+    color: black;
+    border-radius: 39px;
+    padding: 2px;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.preview-field-value {
+    color: #3e556d;
+}
+@media only screen and (max-width: 768px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+    }
+    .preview-screen {
+        display: none;
+    }
 }
