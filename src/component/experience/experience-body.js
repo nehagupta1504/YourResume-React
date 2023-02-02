@@ -1,3 +1,5 @@
+import styles from "./experience.module.css";
+
 export const AddExperience = (props) => {
     const { handleStateChange, currentCompany, saveExperience } = props;
     const { companyName, position, jobDescription, current, from, to, index } =
@@ -10,36 +12,41 @@ export const AddExperience = (props) => {
             ? false
             : true;
     return (
-        <div className="form-body experience" key={index}>
-            <div className="experience__subfield">
-                <label htmlFor="companyName">Enter your company:</label>
-                <input
-                    type="text"
-                    id="companyName"
-                    name="companyName"
-                    value={companyName}
-                    onChange={(e) => handleStateChange(e)}
-                    required
-                />
+        <div key={index}>
+            <div className="col-2">
+                <div className="text-field experience__subfield">
+                    <label htmlFor="companyName">Enter your company:</label>
+                    <input
+                        type="text"
+                        id="companyName"
+                        className="input-field"
+                        name="companyName"
+                        value={companyName}
+                        onChange={(e) => handleStateChange(e)}
+                        required
+                    />
+                </div>
+                <div className="text-field  experience__subfield">
+                    <label htmlFor="position">Enter your position:</label>
+                    <input
+                        type="text"
+                        id="position"
+                        className="input-field "
+                        name="position"
+                        value={position}
+                        onChange={(e) => handleStateChange(e)}
+                        required
+                    />
+                </div>
             </div>
-            <div className="experience__subfield">
-                <label htmlFor="position">Enter your position:</label>
-                <input
-                    type="text"
-                    id="position"
-                    name="position"
-                    value={position}
-                    onChange={(e) => handleStateChange(e)}
-                    required
-                />
-            </div>
-            <div className="experience__subfield text-area">
+            <div className="text-field text-area experience__subfield text-area">
                 <label htmlFor="jobDescription">
                     Add some job description:
                 </label>
                 <textarea
                     type="text"
                     id="jobDescription"
+                    className="text-area__input input-field"
                     name="jobDescription"
                     value={jobDescription}
                     onChange={(e) => handleStateChange(e)}
@@ -48,7 +55,7 @@ export const AddExperience = (props) => {
                     required
                 />
             </div>
-            <div className="experience__subfield">
+            <div className="text-field experience__subfield checkbox">
                 <label htmlFor="companyName">
                     Is this your current company
                 </label>
@@ -56,42 +63,48 @@ export const AddExperience = (props) => {
                     type="checkbox"
                     id="current"
                     name="current"
+                    className="checkbox_input"
                     value={current}
                     checked={current}
                     onChange={(e) => handleStateChange(e)}
                     required
                 />
             </div>
-            <div className="experience__subfield">
-                <label htmlFor="from">Start date:</label>
-                <input
-                    type="date"
-                    id="from"
-                    name="from"
-                    value={from}
-                    onChange={(e) => handleStateChange(e)}
-                    required
-                />
-            </div>
-            {!current && (
-                <div className="experience__subfield">
-                    <label htmlFor="to">Worked till:</label>
+            <div className="col-2">
+                <div className="text-field experience__subfield">
+                    <label htmlFor="from">Start date:</label>
                     <input
                         type="date"
-                        id="to"
-                        name="to"
-                        value={to}
+                        id="from"
+                        name="from"
+                        value={from}
+                        className={`input-field  ${styles["date-input"]}`}
                         onChange={(e) => handleStateChange(e)}
                         required
                     />
                 </div>
-            )}
-            <div className="btn-footer">
+                {!current && (
+                    <div className="text-field experience__subfield">
+                        <label htmlFor="to">Worked till:</label>
+                        <input
+                            type="date"
+                            id="to"
+                            className={`input-field  ${styles["date-input"]}`}
+                            name="to"
+                            value={to}
+                            onChange={(e) => handleStateChange(e)}
+                            required
+                        />
+                    </div>
+                )}
+            </div>
+            <div className={`btn-right ${styles["btn-footer"]}`}>
                 <button
+                    className={`btn btn-dark`}
                     onClick={(e) => saveExperience(e)}
                     disabled={showDisabled}
                 >
-                    Save experience
+                    Save
                 </button>
             </div>
         </div>

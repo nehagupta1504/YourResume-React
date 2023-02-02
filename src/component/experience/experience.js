@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { AddExperience } from "./experience-body";
 import { ShowExperience } from "./show-experience";
 import { downloadResume } from "../../services/resume";
+import styles from "./experience.module.css";
 export const Experience = (props) => {
     const initialState = {
         companyName: "",
@@ -51,26 +52,46 @@ export const Experience = (props) => {
     };
     return (
         <>
-            <AddExperience
-                currentCompany={currentCompany}
-                handleStateChange={handleStateChange}
-                saveExperience={saveExperience}
-            />
-            {companiesData &&
-                companiesData.map((company, index) => {
-                    return (
-                        <div key={company.index}>
-                            <h3>Experience-{index + 1}</h3>
-                            <ShowExperience
-                                currentCompany={company}
+            <div className="body-container">
+                <div className="form-container">
+                    <div className={`form ${styles["experience-form"]}`}>
+                        <div className={`${styles["experience-info"]}`}>
+                            <h1>Add your Experience</h1>
+                            <AddExperience
+                                currentCompany={currentCompany}
                                 handleStateChange={handleStateChange}
-                                deleteExperience={deleteExperience}
+                                saveExperience={saveExperience}
                             />
+
+                            <div className="btn-right">
+                                <button
+                                    className="btn btn-dark"
+                                    onClick={setitemToLocalStorage}
+                                >
+                                    Next
+                                </button>
+                            </div>
                         </div>
-                    );
-                })}
-            <div className="form-footer">
-                <button onClick={setitemToLocalStorage}>Next</button>
+                    </div>
+                    <div className="preview">
+                        <h1>Experience </h1>
+                        {companiesData &&
+                            companiesData.map((company, index) => {
+                                return (
+                                    <div key={company.index}>
+                                        <h3>Experience-{index + 1}</h3>
+                                        <ShowExperience
+                                            currentCompany={company}
+                                            handleStateChange={
+                                                handleStateChange
+                                            }
+                                            deleteExperience={deleteExperience}
+                                        />
+                                    </div>
+                                );
+                            })}
+                    </div>
+                </div>
             </div>
         </>
     );

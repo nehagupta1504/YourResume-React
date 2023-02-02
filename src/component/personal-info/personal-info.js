@@ -28,7 +28,7 @@ export const PersonalInfo = (props) => {
             <div className="form-container">
                 <div className="form">
                     <h1>Add your personal information</h1>
-                    <div className="personal-info">
+                    <div className={`${styles["personal-info"]}`}>
                         <div className="personal-info__subfield text-field">
                             <label htmlFor="name">Enter your name:</label>
                             <input
@@ -67,40 +67,44 @@ export const PersonalInfo = (props) => {
                                 required
                             />
                         </div>
-                        <div className="personal-info__subfield text-field">
-                            <label htmlFor="linkedIn">
-                                Enter your linkedIn username:
-                            </label>
-                            <input
-                                type="text"
-                                id="linkedIn"
-                                className="input-field"
-                                name="linkedIn"
-                                value={user.linkedIn}
-                                onChange={(e) => handleStateChange(e)}
-                            />
+                        <div className="col-2">
+                            <div className="personal-info__subfield text-field">
+                                <label htmlFor="linkedIn">
+                                    Enter your linkedIn username:
+                                </label>
+                                <input
+                                    type="text"
+                                    id="linkedIn"
+                                    className="input-field"
+                                    name="linkedIn"
+                                    value={user.linkedIn}
+                                    onChange={(e) => handleStateChange(e)}
+                                />
+                            </div>
+                            <div className="personal-info__subfield text-field">
+                                <label htmlFor="name">Enter your github:</label>
+                                <input
+                                    type="text"
+                                    id="github"
+                                    className="input-field"
+                                    name="github"
+                                    value={user.github}
+                                    onChange={(e) => handleStateChange(e)}
+                                />
+                            </div>
                         </div>
-                        <div className="personal-info__subfield text-field">
-                            <label htmlFor="name">Enter your github:</label>
-                            <input
-                                type="text"
-                                id="github"
-                                className="input-field"
-                                name="github"
-                                value={user.github}
-                                onChange={(e) => handleStateChange(e)}
-                            />
+                        <div className="btn-right">
+                            <button
+                                className="btn btn-dark"
+                                onClick={setitemToLocalStorage}
+                                disabled={
+                                    !user.name || !user.email || !user.contact
+                                }
+                            >
+                                Next
+                                <span></span>
+                            </button>
                         </div>
-                        <button
-                            className="btn btn-dark"
-                            onClick={setitemToLocalStorage}
-                            disabled={
-                                !user.name || !user.email || !user.contact
-                            }
-                        >
-                            Next
-                            <span></span>
-                        </button>
                     </div>
                 </div>
                 <div className="preview">
