@@ -30,17 +30,18 @@ export const Experience = (props) => {
     const saveExperience = (e) => {
         const newCompany = {
             ...currentCompany,
-            index: new Date().getTime().toString() + currentCompany.companyName,
+            id: new Date().getTime().toString() + currentCompany.companyName,
         };
         setCompaniesData([...companiesData, newCompany]);
         setCurrentCompany(initialState);
     };
     const deleteExperience = (id) => {
+        console.log(id);
         if (!companiesData) {
             alert("No company to delete");
         } else {
             const companyData = companiesData
-                .filter((company) => company.index !== id)
+                .filter((company) => company.id !== id)
                 .map((el) => el);
             console.log(companiesData);
             setCompaniesData([...companyData]);
@@ -75,21 +76,16 @@ export const Experience = (props) => {
                     </div>
                     <div className="preview">
                         <h1>Experience </h1>
-                        {companiesData &&
-                            companiesData.map((company, index) => {
-                                return (
-                                    <div key={company.index}>
-                                        <h3>Experience-{index + 1}</h3>
-                                        <ShowExperience
-                                            currentCompany={company}
-                                            handleStateChange={
-                                                handleStateChange
-                                            }
-                                            deleteExperience={deleteExperience}
-                                        />
-                                    </div>
-                                );
-                            })}
+
+                        {companiesData.length > 0 && (
+                            <div>
+                                <ShowExperience
+                                    companiesData={companiesData}
+                                    handleStateChange={handleStateChange}
+                                    deleteExperience={deleteExperience}
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

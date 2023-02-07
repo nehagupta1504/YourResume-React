@@ -219,7 +219,7 @@ input[type="text"]:focus {
     flex-direction: column;
     align-items: center;
     margin-right: 40px;
-    /* max-height: 500px; */
+    max-height: 500px;
     overflow: scroll;
 }
 .preview-field-value {
@@ -244,4 +244,30 @@ button[disabled] {
     .preview-screen {
         display: none;
     }
+}
+
+table {
+    margin: 0 36px;
+    background-color: #222831;
+    color: #dddddd;
+}
+thead,
+tbody,
+tr,
+td,
+th {
+    border: 1px solid #dddddd;
+    padding: 10px 5px;
+}
+th {
+    text-align: left;
+    font-size: 18px;
+}
+
+td {
+    vertical-align: top;
+    text-align: left;
+    padding: 10px 5px;
+    font-size: 16px;
+    font-weight: 400;
 }

@@ -4,3 +4,22 @@
 .btn-footer {
     width: 100%;
 }
+
+.table-row {
+    max-height: 150px;
+    overflow: scroll;
+    min-width: 250px;
+}
+.table-cell {
+    min-width: 120px;
+}
+
+.table-cell-lg {
+    min-width: 180px;
+}
+
+.table-actions {
+    align-items: center;
+    font-size: 16px;
+    border-radius: 0;
+}
