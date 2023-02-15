@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './personal-info.module.css';
 import { AppContext } from '../../context/appContext';
+import { BasicTemplate } from '../resume-templates/basic/basic';
 export const PersonalInfo = (props) => {
     const initialState = {
         name: '',
@@ -33,7 +34,7 @@ export const PersonalInfo = (props) => {
         <div className='body-container'>
             <div className='form-container'>
                 <div className='form'>
-                    <h1>Add your personal information</h1>
+                    <h1 className='heading'>Add your personal information</h1>
                     <div className={`${styles['personal-info']}`}>
                         <div className='personal-info__subfield text-field'>
                             <label htmlFor='name'>Enter your name:</label>
@@ -113,61 +114,8 @@ export const PersonalInfo = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className='preview'>
-                    <h1>Personal Information</h1>
-                    <div className='preview-screen'>
-                        {user.name && (
-                            <div className='preview-field'>
-                                <h3>
-                                    Name:{' '}
-                                    <span className='preview-field-value'>
-                                        {user.name}
-                                    </span>
-                                </h3>
-                            </div>
-                        )}
-                        {user.email && (
-                            <div className='preview-field'>
-                                <h3>
-                                    Email:{' '}
-                                    <span className='preview-field-value'>
-                                        {user.email}
-                                    </span>
-                                </h3>
-                            </div>
-                        )}
-                        {user.contact && (
-                            <div className='preview-field'>
-                                <h3>
-                                    Mob. No:{' '}
-                                    <span className='preview-field-value'>
-                                        {user.contact}
-                                    </span>
-                                </h3>
-                            </div>
-                        )}
-
-                        {user.linkedIn && (
-                            <div className='preview-field'>
-                                <h3>
-                                    LinkedIn:{' '}
-                                    <span className='preview-field-value'>
-                                        {user.linkedIn}
-                                    </span>
-                                </h3>
-                            </div>
-                        )}
-                        {user.github && (
-                            <div className='preview-field'>
-                                <h3>
-                                    Github:{' '}
-                                    <span className='preview-field-value'>
-                                        {user.github}
-                                    </span>
-                                </h3>
-                            </div>
-                        )}
-                    </div>
+                <div className='preview-resume'>
+                    <BasicTemplate></BasicTemplate>
                 </div>
             </div>
         </div>
