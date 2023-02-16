@@ -1,10 +1,9 @@
 import { useState, useEffect, useContext } from 'react';
 import { AddExperience } from './experience-body';
-import { ShowExperience } from './show-experience';
 import { downloadResume } from '../../services/resume';
 import { AppContext } from '../../context/appContext';
 import styles from './experience.module.css';
-import { useMemo } from 'react';
+import { BasicTemplate } from '../resume-templates/basic/basic';
 export const Experience = (props) => {
     const initialState = {
         companyName: '',
@@ -57,16 +56,6 @@ export const Experience = (props) => {
         localStorage.setItem('experience', JSON.stringify(companiesData));
         downloadResume(['personalInformation', 'experience']);
     };
-    const showExperience = useMemo(
-        () => (
-            <ShowExperience
-                companiesData={companiesData}
-                handleStateChange={handleStateChange}
-                deleteExperience={deleteExperience}
-            />
-        ),
-        [companiesData],
-    );
 
     return (
         <>
@@ -92,11 +81,7 @@ export const Experience = (props) => {
                         </div>
                     </div>
                     <div className='preview'>
-                        <h1>Experience </h1>
-
-                        {companiesData.length > 0 && (
-                            <div>{showExperience}</div>
-                        )}
+                        <BasicTemplate></BasicTemplate>
                     </div>
                 </div>
             </div>

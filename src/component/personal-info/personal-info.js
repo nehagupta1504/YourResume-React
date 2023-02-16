@@ -28,7 +28,7 @@ export const PersonalInfo = (props) => {
         );
         console.log(filterUser);
         localStorage.setItem('personalInformation', JSON.stringify(filterUser));
-        navigate('/experience');
+        navigate('/');
     };
     return (
         <div className='body-container'>
@@ -103,7 +103,7 @@ export const PersonalInfo = (props) => {
                         <div className='btn-right'>
                             <button
                                 className='btn btn-dark'
-                                onClick={setitemToLocalStorage}
+                                onClick={() => navigate('/about')}
                                 disabled={
                                     !user.name || !user.email || !user.contact
                                 }

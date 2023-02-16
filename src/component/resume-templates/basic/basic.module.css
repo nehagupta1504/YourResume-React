@@ -12,8 +12,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 .resume-preview {
-    width: 395px;
-    height: 500px;
+    width: 477px;
+    height: 600px;
     font-size: 12px;
 }
 .page-container,
@@ -56,12 +56,16 @@ a:hover {
     color: var(--light-theme);
 }
 .left-image {
-    height: 20%;
+    height: 22%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
 }
 .user-image {
     display: block;
     height: 92%;
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
     margin-top: 5%;
     border: 1px solid white;
@@ -69,25 +73,27 @@ a:hover {
 
 .section {
     width: 100%;
-    margin: 30px 10px 8px;
+    margin: 5% 2% 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 5%;
+    border-bottom: 1px solid var(--dark-theme-font-color);
 }
 .sub-section {
     width: 100%;
-    margin-left: 20px;
 }
 .section-heading {
-    font-size: 1.2rem;
+    font-size: 0.8vw;
     font-weight: 600;
     color: var(--dark-theme-font-color);
-    margin-bottom: 0px;
+    margin: 1%;
 }
+
 .about-text {
-    margin-top: 10px;
-    font-size: 0.8rem;
+    margin-top: 2%;
+    font-size: 0.6vw;
     font-weight: 500;
     text-align: center;
     color: var(--dark-theme-font-color);
@@ -135,7 +141,7 @@ a:hover {
 }
 
 .language {
-    margin: 20px 10px;
+    margin: 2% 2%;
     display: flex;
     flex-direction: column;
 }
@@ -166,25 +172,28 @@ progress::-webkit-progress-value {
 }
 
 .section-right {
-    margin: 20px 0px 10px 0px;
+    margin: 2% 0px 1% 0px;
     width: 100%;
     color: var(--light-theme);
 }
 .section-personal-details {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    align-items: center;
+}
+.contact-info a {
+    display: flex;
+    align-items: center;
 }
 .contact-info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    font-size: 14px;
-    width: 50%;
+    width: 60%;
 }
 .bi-right {
-    height: 14px;
-    width: 14px;
+    height: 0.5vw;
+    width: 0.5vw;
 }
 .sub-contact-info {
     display: flex;
@@ -192,7 +201,7 @@ progress::-webkit-progress-value {
 }
 .sub-contact-info-text {
     margin-left: 2px;
-    font-size: 0.8rem;
+    font-size: 0.5vw;
     font-weight: 500;
     text-align: center;
     color: var(--light-theme);
@@ -203,10 +212,10 @@ progress::-webkit-progress-value {
 .name {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
 }
 .name h2 {
-    color: 2.5rem;
+    font-size: 1vw;
 }
 .section-experience {
     margin-top: 10px;
@@ -214,24 +223,25 @@ progress::-webkit-progress-value {
 .timeline {
     max-width: 60%;
     text-align: justify;
-    padding: 16px 0px 2px 16px;
+    padding: 2px 0px 2px 12px;
     border-left: 2px solid #fff;
     position: relative;
-    line-height: 1.5rem;
+    line-height: 0.5rem;
     list-style: none;
     letter-spacing: 0.2px;
-    margin-left: 180px;
+    margin-left: 40%;
     color: var(--light-theme);
-    margin-top: 20px;
+    margin-top: 5%;
 }
 
 .timeline .timeline-text {
-    font-size: 14px;
-    margin-bottom: 0.5rem;
+    font-size: 0.5vw;
+    margin-bottom: 1%;
 }
 .timeline-event {
     position: relative;
-    margin-bottom: 2px;
+    margin-bottom: 8%;
+    padding-bottom: 5%;
 }
 .timeline-event:not(:last-child) {
     border-bottom: 1px solid rgb(73, 128, 174, 0.3);
@@ -240,7 +250,7 @@ progress::-webkit-progress-value {
 .timeline-event::before {
     position: absolute;
     content: attr(event-heading);
-    left: -190px;
+    left: -125px;
 }
 .timeline-event:after {
     position: absolute;
@@ -252,21 +262,21 @@ progress::-webkit-progress-value {
 .timeline .timeline-event::after {
     -webkit-box-shadow: 0 0 0 3px rgb(73 128 174);
     box-shadow: 0 0 0 3px rgb(73 128 174);
-    left: -20.8px;
+    left: -16.8px;
     background: #fff;
     border-radius: 50%;
     height: 9px;
     width: 9px;
     content: '';
-    top: 9px;
+    top: 0px;
 }
 .timeline .event-time::before,
 .timeline .event-time2::before {
     position: absolute;
     content: attr(event-time);
-    left: -190px;
+    left: -125px;
     top: 27px;
-    font-size: 13px;
+    font-size: 0.4vw;
 }
 .timeline .event-time2::before {
     content: attr(event-time2);
@@ -277,7 +287,9 @@ progress::-webkit-progress-value {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+}
+.section-right-heading h3 {
+    margin: 0;
 }
 .education {
     height: 80px;

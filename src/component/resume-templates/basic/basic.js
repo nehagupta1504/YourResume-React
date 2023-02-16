@@ -36,7 +36,7 @@ export const BasicTemplate = (props) => {
                                         className={`${styles['section']} ${styles['section-about']}`}
                                     >
                                         <h3
-                                            className={`${styles['section-heading']}${styles['about-heading']}`}
+                                            className={`${styles['section-heading']}`}
                                         >
                                             About Me
                                         </h3>
@@ -155,7 +155,7 @@ export const BasicTemplate = (props) => {
                                         </div>
                                     </>
                                 )}
-                                {languages && (
+                                {languages.length > 0 && (
                                     <>
                                         <div
                                             className={`${styles['border-line']}`}
@@ -177,7 +177,7 @@ export const BasicTemplate = (props) => {
                                                         >
                                                             <span>
                                                                 {
-                                                                    language.lanuguage
+                                                                    language.language
                                                                 }
                                                             </span>
                                                             <progress
@@ -195,7 +195,7 @@ export const BasicTemplate = (props) => {
                                         </div>
                                     </>
                                 )}
-                                {hobbies && (
+                                {hobbies.length > 0 && (
                                     <>
                                         <div
                                             className={`${styles['border-line']}`}
@@ -348,7 +348,7 @@ export const BasicTemplate = (props) => {
                                     </div>
                                 </div>
 
-                                {experience && (
+                                {experience.length > 0 && (
                                     <>
                                         <div
                                             className={`${styles['bottom-right-line']}`}
@@ -404,7 +404,7 @@ export const BasicTemplate = (props) => {
                                         </div>
                                     </>
                                 )}
-                                {education && (
+                                {education.length > 0 && (
                                     <>
                                         <div
                                             className={`${styles['bottom-right-line']}`}
