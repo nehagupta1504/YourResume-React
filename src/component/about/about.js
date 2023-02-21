@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { BasicTemplate } from '../resume-templates/basic/basic';
 import styles from './about.module.css';
 import { AppContext } from '../../context/appContext';
@@ -7,9 +7,14 @@ export const About = (props) => {
     const [about, setAbout] = useState('');
     const navigate = useNavigate();
     const { profile, setProfile } = useContext(AppContext);
+    useEffect(() => {
+        if (profile.about) {
+            setAbout(profile.about);
+        }
+    }, [profile]);
     const handleStateChange = (e) => {
         setAbout(e.target.value);
-        setProfile({ ...profile, about });
+        setProfile({ ...profile, about: e.target.value });
     };
     return (
         <div className='body-container'>

@@ -15,10 +15,13 @@ export const AppContext = createContext({
     setContext: () => null,
 });
 export const AppProvider = ({ children }) => {
-    const [profile, setProfile] = useState(initialState);
+    const [profile, setProfile] = useState(() => {
+        const profile = JSON.parse(localStorage.getItem('profile'));
+        return profile ? profile : initialState;
+    });
     const value = useMemo(() => ({ profile, setProfile }), [profile]);
     useEffect(() => {
-        console.log('provider profile: ', profile);
+        localStorage.setItem('profile', JSON.stringify(profile));
     }, [profile]);
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

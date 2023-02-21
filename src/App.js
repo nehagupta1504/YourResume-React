@@ -1,5 +1,6 @@
 import { PersonalInfo } from './component/personal-info/personal-info';
 import { Experience } from './component/experience/experience';
+import { Education } from './component/education/education';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './component/home/home';
 import Header from './component/header/header';
@@ -20,6 +21,7 @@ function App() {
                 />
 
                 <Route exact path='/experience' element={<Experience />} />
+                <Route exact path='/education' element={<Education />} />
             </Routes>
         </>
     );

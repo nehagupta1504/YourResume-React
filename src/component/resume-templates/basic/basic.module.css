@@ -78,8 +78,14 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5%;
+    padding-bottom: 8%;
     border-bottom: 1px solid var(--dark-theme-font-color);
+}
+.section::after {
+    margin-top: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-theme);
 }
 .sub-section {
     width: 100%;
@@ -118,8 +124,8 @@ a:hover {
     margin-top: 20px;
 }
 .social-text {
-    font-size: 14px;
-    margin: 0px 15px;
+    font-size: 0.5vw;
+    margin: 0px 2%;
 }
 .bi {
     height: 25px;
@@ -146,8 +152,8 @@ a:hover {
     flex-direction: column;
 }
 .bi-small {
-    height: 18px;
-    width: 18px;
+    height: 10%;
+    width: 8%;
 }
 .language-progress-bar {
     background: var(--dark-theme);
@@ -163,7 +169,7 @@ progress::-webkit-progress-value {
     font-size: 14px;
     color: var(--dark-theme);
     justify-content: space-evenly;
-    margin: 20px 0px;
+    margin: 2% 0px;
 }
 .hobby {
     display: flex;
@@ -175,6 +181,12 @@ progress::-webkit-progress-value {
     margin: 2% 0px 1% 0px;
     width: 100%;
     color: var(--light-theme);
+}
+.section-right::after {
+    margin-top: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-theme);
 }
 .section-personal-details {
     display: flex;

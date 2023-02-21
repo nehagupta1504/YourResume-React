@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './personal-info.module.css';
 import { AppContext } from '../../context/appContext';
@@ -14,6 +14,15 @@ export const PersonalInfo = (props) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(initialState);
     const { profile, setProfile } = useContext(AppContext);
+    useEffect(() => {
+        const { personalInformation } = profile;
+        for (const key in personalInformation) {
+            if (key) {
+                setUser({ ...user, key: personalInformation[key] });
+            }
+        }
+    }, [profile]);
+
     const handleStateChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
         setProfile({

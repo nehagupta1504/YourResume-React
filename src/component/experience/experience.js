@@ -4,6 +4,7 @@ import { downloadResume } from '../../services/resume';
 import { AppContext } from '../../context/appContext';
 import styles from './experience.module.css';
 import { BasicTemplate } from '../resume-templates/basic/basic';
+import { useNavigate } from 'react-router-dom';
 export const Experience = (props) => {
     const initialState = {
         companyName: '',
@@ -16,6 +17,7 @@ export const Experience = (props) => {
 
     const [currentCompany, setCurrentCompany] = useState(initialState);
     const [companiesData, setCompaniesData] = useState([]);
+    const navigate = useNavigate();
     const { profile, setProfile } = useContext(AppContext);
     const handleStateChange = (e) => {
         e.target.name === 'current'
@@ -52,10 +54,10 @@ export const Experience = (props) => {
             setCompaniesData([...companyData]);
         }
     };
-    const setitemToLocalStorage = () => {
-        localStorage.setItem('experience', JSON.stringify(companiesData));
-        downloadResume(['personalInformation', 'experience']);
-    };
+    // const setitemToLocalStorage = () => {
+    //     localStorage.setItem('experience', JSON.stringify(companiesData));
+    //     downloadResume(['personalInformation', 'experience']);
+    // };
 
     return (
         <>
@@ -73,7 +75,7 @@ export const Experience = (props) => {
                             <div className='btn-right'>
                                 <button
                                     className='btn btn-dark'
-                                    onClick={setitemToLocalStorage}
+                                    onClick={() => navigate('/education')}
                                 >
                                     Next
                                 </button>

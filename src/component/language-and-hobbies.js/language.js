@@ -49,7 +49,9 @@ export const Languages = (props) => {
                         value={state?.percentage}
                         onChange={(e) => handleChange(e)}
                     >
-                        <option disabled={true}>Proficiency</option>
+                        <option disabled={true} value=''>
+                            Proficiency
+                        </option>
                         <option value={1}>1</option>
                         <option value={2}>2</option>
                         <option value={3}>3</option>
