@@ -5,6 +5,7 @@ import { AppContext } from '../../context/appContext';
 import styles from './experience.module.css';
 import { BasicTemplate } from '../resume-templates/basic/basic';
 import { useNavigate } from 'react-router-dom';
+import SideMenu from '../side-menu/side-menu';
 export const Experience = (props) => {
     const initialState = {
         companyName: '',
@@ -61,29 +62,32 @@ export const Experience = (props) => {
 
     return (
         <>
-            <div className='body-container'>
-                <div className='form-container'>
-                    <div className={`form ${styles['experience-form']}`}>
-                        <div className={`${styles['experience-info']}`}>
-                            <h1>Add your Experience</h1>
-                            <AddExperience
-                                currentCompany={currentCompany}
-                                handleStateChange={handleStateChange}
-                                saveExperience={saveExperience}
-                            />
+            <div className='global-container'>
+                <SideMenu />
+                <div className='body-container'>
+                    <div className='form-container'>
+                        <div className={`form ${styles['experience-form']}`}>
+                            <div className={`${styles['experience-info']}`}>
+                                <h1>Add your Experience</h1>
+                                <AddExperience
+                                    currentCompany={currentCompany}
+                                    handleStateChange={handleStateChange}
+                                    saveExperience={saveExperience}
+                                />
 
-                            <div className='btn-right'>
-                                <button
-                                    className='btn btn-dark'
-                                    onClick={() => navigate('/education')}
-                                >
-                                    Next
-                                </button>
+                                <div className='btn-right'>
+                                    <button
+                                        className='btn btn-dark'
+                                        onClick={() => navigate('/education')}
+                                    >
+                                        Next
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='preview'>
-                        <BasicTemplate></BasicTemplate>
+                        <div className='preview'>
+                            <BasicTemplate></BasicTemplate>
+                        </div>
                     </div>
                 </div>
             </div>

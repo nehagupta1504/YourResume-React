@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './personal-info.module.css';
 import { AppContext } from '../../context/appContext';
 import { BasicTemplate } from '../resume-templates/basic/basic';
+import SideMenu from '../side-menu/side-menu';
 export const PersonalInfo = (props) => {
     const initialState = {
         name: '',
@@ -40,50 +41,53 @@ export const PersonalInfo = (props) => {
         navigate('/');
     };
     return (
-        <div className='body-container'>
-            <div className='form-container'>
-                <div className='form'>
-                    <h1 className='heading'>Add your personal information</h1>
-                    <div className={`${styles['personal-info']}`}>
-                        <div className='personal-info__subfield text-field'>
-                            <label htmlFor='name'>Enter your name:</label>
-                            <input
-                                type='text'
-                                id='name'
-                                className='input-field'
-                                name='name'
-                                value={user.name}
-                                onChange={(e) => handleStateChange(e)}
-                                required
-                            />
-                        </div>
-                        <div className='personal-info__subfield text-field'>
-                            <label htmlFor='email'>Enter your email:</label>
-                            <input
-                                type='email'
-                                id='email'
-                                className='input-field'
-                                name='email'
-                                value={user.email}
-                                onChange={(e) => handleStateChange(e)}
-                                required
-                            />
-                        </div>
-                        <div className='personal-info__subfield text-field'>
-                            <label htmlFor='contact'>
-                                Enter your contact no. :
-                            </label>
-                            <input
-                                type='text'
-                                id='contact'
-                                className='input-field'
-                                name='contact'
-                                value={user.contact}
-                                onChange={(e) => handleStateChange(e)}
-                                required
-                            />
-                        </div>
-                        <div className='col-2'>
+        <div className='global-container'>
+            <SideMenu />
+            <div className='body-container'>
+                <div className='form-container'>
+                    <div className='form'>
+                        <h1 className='heading'>
+                            Add your personal information
+                        </h1>
+                        <div className={`${styles['personal-info']}`}>
+                            <div className='personal-info__subfield text-field'>
+                                <label htmlFor='name'>Enter your name:</label>
+                                <input
+                                    type='text'
+                                    id='name'
+                                    className='input-field'
+                                    name='name'
+                                    value={user.name}
+                                    onChange={(e) => handleStateChange(e)}
+                                    required
+                                />
+                            </div>
+                            <div className='personal-info__subfield text-field'>
+                                <label htmlFor='email'>Enter your email:</label>
+                                <input
+                                    type='email'
+                                    id='email'
+                                    className='input-field'
+                                    name='email'
+                                    value={user.email}
+                                    onChange={(e) => handleStateChange(e)}
+                                    required
+                                />
+                            </div>
+                            <div className='personal-info__subfield text-field'>
+                                <label htmlFor='contact'>
+                                    Enter your contact no. :
+                                </label>
+                                <input
+                                    type='text'
+                                    id='contact'
+                                    className='input-field'
+                                    name='contact'
+                                    value={user.contact}
+                                    onChange={(e) => handleStateChange(e)}
+                                    required
+                                />
+                            </div>
                             <div className='personal-info__subfield text-field'>
                                 <label htmlFor='linkedIn'>
                                     Enter your linkedIn username:
@@ -108,23 +112,25 @@ export const PersonalInfo = (props) => {
                                     onChange={(e) => handleStateChange(e)}
                                 />
                             </div>
-                        </div>
-                        <div className='btn-right'>
-                            <button
-                                className='btn btn-dark'
-                                onClick={() => navigate('/about')}
-                                disabled={
-                                    !user.name || !user.email || !user.contact
-                                }
-                            >
-                                Next
-                                <span></span>
-                            </button>
+                            <div className='btn-right'>
+                                <button
+                                    className='btn btn-dark'
+                                    onClick={() => navigate('/about')}
+                                    disabled={
+                                        !user.name ||
+                                        !user.email ||
+                                        !user.contact
+                                    }
+                                >
+                                    Next
+                                    <span></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='preview-resume'>
-                    <BasicTemplate></BasicTemplate>
+                    <div className='preview-resume'>
+                        <BasicTemplate></BasicTemplate>
+                    </div>
                 </div>
             </div>
         </div>

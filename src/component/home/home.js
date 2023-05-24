@@ -16,7 +16,7 @@ export const Home = () => {
                     <div className='section-details_call-to-action'>
                         <button
                             className={`btn btn-dark margin  section-details_action`}
-                            onClick={() => navigate('/personal-info')}
+                            onClick={() => navigate('/template')}
                         >
                             Click here
                         </button>

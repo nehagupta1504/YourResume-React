@@ -249,6 +249,7 @@ progress::-webkit-progress-value {
 .timeline .timeline-text {
     font-size: 0.5vw;
     margin-bottom: 1%;
+    letter-spacing: -0.2px;
 }
 .timeline-event {
     position: relative;
@@ -304,5 +305,8 @@ progress::-webkit-progress-value {
     margin: 0;
 }
 .education {
-    height: 80px;
+    padding-bottom: 0.8vw;
+}
+.timeline-heading {
+    margin: 0.5vw 0.5vw;
 }

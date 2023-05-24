@@ -5,30 +5,34 @@ import { useState, useContext } from 'react';
 import { BasicTemplate } from '../resume-templates/basic/basic';
 import { Languages } from './language';
 import { Hobbies } from './hobbies';
+import SideMenu from '../side-menu/side-menu';
 export const LanguagesAndHobbies = () => {
     const [hobbies, setHobbies] = useState([]);
     const navigate = useNavigate();
     return (
         <>
-            <div className='body-container'>
-                <div className='form-container'>
-                    <div className={`form `}>
-                        <div className={``}>
-                            <Languages />
-                            <Hobbies value={(hobbies, setHobbies)} />
+            <div className='global-container'>
+                <SideMenu />
+                <div className='body-container'>
+                    <div className='form-container'>
+                        <div className={`form `}>
+                            <div className={``}>
+                                <Languages />
+                                <Hobbies value={(hobbies, setHobbies)} />
 
-                            <div className='btn-right'>
-                                <button
-                                    className='btn btn-dark'
-                                    onClick={() => navigate('/experience')}
-                                >
-                                    Next
-                                </button>
+                                <div className='btn-right'>
+                                    <button
+                                        className='btn btn-dark'
+                                        onClick={() => navigate('/experience')}
+                                    >
+                                        Next
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='preview'>
-                        <BasicTemplate></BasicTemplate>
+                        <div className='preview'>
+                            <BasicTemplate></BasicTemplate>
+                        </div>
                     </div>
                 </div>
             </div>
