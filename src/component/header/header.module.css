@@ -2,6 +2,7 @@
     color: #dddddd;
     background-color: #30475e;
     z-index: 100;
+    border-bottom: 0.5px solid #dddddd;
 }
 .header {
     display: flex;

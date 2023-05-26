@@ -50,24 +50,22 @@ export const Education = () => {
         <div className='global-container'>
             <SideMenu />
             <div className='body-container'>
-                <div className='form-container'>
-                    <div className={`form ${styles['experience-form']}`}>
-                        <div className={`${styles['experience-info']}`}>
-                            <h1>Add your Education</h1>
-                            <AddEducation
-                                currentEducation={currentEducation}
-                                handleStateChange={handleStateChange}
-                                saveEducation={saveEducation}
-                            />
+                <div className={`form ${styles['experience-form']}`}>
+                    <div className={`${styles['experience-info']}`}>
+                        <h1>Add your Education</h1>
+                        <AddEducation
+                            currentEducation={currentEducation}
+                            handleStateChange={handleStateChange}
+                            saveEducation={saveEducation}
+                        />
 
-                            <div className='btn-right'>
-                                <button className='btn btn-dark'>Next</button>
-                            </div>
+                        <div className='btn-right'>
+                            <button className='btn btn-dark'>Next</button>
                         </div>
                     </div>
-                    <div className='preview'>
-                        <BasicTemplate></BasicTemplate>
-                    </div>
+                </div>
+                <div className='preview'>
+                    <BasicTemplate></BasicTemplate>
                 </div>
             </div>
         </div>

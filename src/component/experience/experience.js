@@ -65,29 +65,27 @@ export const Experience = (props) => {
             <div className='global-container'>
                 <SideMenu />
                 <div className='body-container'>
-                    <div className='form-container'>
-                        <div className={`form ${styles['experience-form']}`}>
-                            <div className={`${styles['experience-info']}`}>
-                                <h1>Add your Experience</h1>
-                                <AddExperience
-                                    currentCompany={currentCompany}
-                                    handleStateChange={handleStateChange}
-                                    saveExperience={saveExperience}
-                                />
+                    <div className={`form ${styles['experience-form']}`}>
+                        <div className={`${styles['experience-info']}`}>
+                            <h1>Add your Experience</h1>
+                            <AddExperience
+                                currentCompany={currentCompany}
+                                handleStateChange={handleStateChange}
+                                saveExperience={saveExperience}
+                            />
 
-                                <div className='btn-right'>
-                                    <button
-                                        className='btn btn-dark'
-                                        onClick={() => navigate('/education')}
-                                    >
-                                        Next
-                                    </button>
-                                </div>
+                            <div className='btn-right'>
+                                <button
+                                    className='btn btn-dark'
+                                    onClick={() => navigate('/education')}
+                                >
+                                    Next
+                                </button>
                             </div>
                         </div>
-                        <div className='preview'>
-                            <BasicTemplate></BasicTemplate>
-                        </div>
+                    </div>
+                    <div className='preview'>
+                        <BasicTemplate></BasicTemplate>
                     </div>
                 </div>
             </div>

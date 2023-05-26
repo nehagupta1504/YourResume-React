@@ -14,25 +14,23 @@ export const LanguagesAndHobbies = () => {
             <div className='global-container'>
                 <SideMenu />
                 <div className='body-container'>
-                    <div className='form-container'>
-                        <div className={`form `}>
-                            <div className={``}>
-                                <Languages />
-                                <Hobbies value={(hobbies, setHobbies)} />
+                    <div className={`form `}>
+                        <div className={``}>
+                            <Languages />
+                            <Hobbies value={(hobbies, setHobbies)} />
 
-                                <div className='btn-right'>
-                                    <button
-                                        className='btn btn-dark'
-                                        onClick={() => navigate('/experience')}
-                                    >
-                                        Next
-                                    </button>
-                                </div>
+                            <div className='btn-right'>
+                                <button
+                                    className='btn btn-dark'
+                                    onClick={() => navigate('/experience')}
+                                >
+                                    Next
+                                </button>
                             </div>
                         </div>
-                        <div className='preview'>
-                            <BasicTemplate></BasicTemplate>
-                        </div>
+                    </div>
+                    <div className='preview'>
+                        <BasicTemplate></BasicTemplate>
                     </div>
                 </div>
             </div>
