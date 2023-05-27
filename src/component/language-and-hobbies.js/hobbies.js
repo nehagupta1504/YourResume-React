@@ -27,7 +27,7 @@ export const Hobbies = (props) => {
                     onClick={onSaveHandler}
                     disabled={!hobby}
                 >
-                    Save
+                    +
                 </button>
             </div>
         </div>

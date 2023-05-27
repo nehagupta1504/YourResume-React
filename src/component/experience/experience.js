@@ -74,15 +74,6 @@ export const Experience = (props) => {
                                 handleStateChange={handleStateChange}
                                 saveExperience={saveExperience}
                             />
-
-                            <div className='btn-right'>
-                                <button
-                                    className='btn btn-dark'
-                                    onClick={() => navigate('/education')}
-                                >
-                                    Next
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div className='preview'>

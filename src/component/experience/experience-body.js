@@ -101,7 +101,7 @@ export const AddExperience = (props) => {
                     onClick={(e) => saveExperience(e)}
                     disabled={showDisabled}
                 >
-                    Save
+                    +
                 </button>
             </div>
         </div>

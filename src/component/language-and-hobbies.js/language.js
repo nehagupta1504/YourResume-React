@@ -67,7 +67,7 @@ export const Languages = (props) => {
                     onClick={handleSave}
                     disabled={showDisabled}
                 >
-                    Save
+                    +
                 </button>
             </div>
         </div>

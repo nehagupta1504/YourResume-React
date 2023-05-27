@@ -60,10 +60,6 @@ export const Education = () => {
                                 handleStateChange={handleStateChange}
                                 saveEducation={saveEducation}
                             />
-
-                            <div className='btn-right'>
-                                <button className='btn btn-dark'>Next</button>
-                            </div>
                         </div>
                     </div>
                     <div className='preview'>

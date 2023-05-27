@@ -42,15 +42,6 @@ export const About = (props) => {
                                     required
                                 />
                             </div>
-
-                            <div className='btn-right'>
-                                <button
-                                    className='btn btn-dark'
-                                    onClick={() => navigate('/languages')}
-                                >
-                                    Next
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div className='preview'>

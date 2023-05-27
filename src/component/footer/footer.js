@@ -11,7 +11,9 @@ const Footer = (props) => {
                     disabled={disableLeft}
                     onClick={() => navigate(`${hrefLeft}`)}
                 >
-                    <span className='icon-absolute'>Prev</span>
+                    <span className='icon-absolute icon-absolute-left'>
+                        Prev
+                    </span>
                 </button>
             )}
             {!props.hideRight && (
@@ -20,8 +22,9 @@ const Footer = (props) => {
                     disabled={disableRight}
                     onClick={() => navigate(`${hrefRight}`)}
                 >
-                    <span>Next</span>
-                    <span className='icon icon-right-arrow '></span>
+                    <span className='icon-absolute icon-absolute-right'>
+                        Next
+                    </span>
                 </button>
             )}
         </div>

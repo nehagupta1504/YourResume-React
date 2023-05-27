@@ -107,7 +107,7 @@ export const AddEducation = (props) => {
                     onClick={(e) => saveEducation(e)}
                     disabled={showDisabled}
                 >
-                    Save
+                    +
                 </button>
             </div>
         </div>

@@ -19,15 +19,6 @@ export const LanguagesAndHobbies = () => {
                         <div className={``}>
                             <Languages />
                             <Hobbies value={(hobbies, setHobbies)} />
-
-                            <div className='btn-right'>
-                                <button
-                                    className='btn btn-dark'
-                                    onClick={() => navigate('/experience')}
-                                >
-                                    Next
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div className='preview'>
