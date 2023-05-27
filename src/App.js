@@ -9,6 +9,7 @@ import { LanguagesAndHobbies } from './component/language-and-hobbies.js';
 import SelectTemplate from './component/template/select-template';
 import SideMenu from './component/side-menu/side-menu';
 import Layout from './component/layout/global';
+import Skills from './component/skills/skills';
 function App() {
     return (
         <>
@@ -31,7 +32,7 @@ function App() {
                         path='/languages'
                         element={<LanguagesAndHobbies />}
                     />
-
+                    <Route exact path='/skills' element={<Skills />} />
                     <Route exact path='/experience' element={<Experience />} />
                     <Route exact path='/education' element={<Education />} />
                 </Routes>

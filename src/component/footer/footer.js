@@ -5,22 +5,25 @@ const Footer = (props) => {
     const navigate = useNavigate();
     return (
         <div className={styles['footer']}>
-            <button
-                className='btn btn-dark'
-                disabled={disableLeft}
-                onClick={() => navigate(`${hrefLeft}`)}
-            >
-                Prev
-                <span className='icon icon-left-arrow '></span>
-            </button>
-            <button
-                className='btn btn-dark'
-                disabled={disableRight}
-                onClick={() => navigate(`${hrefRight}`)}
-            >
-                Next
-                <span className='icon icon-right-arrow '></span>
-            </button>
+            {!props.hideLeft && (
+                <button
+                    className='btn btn-dark'
+                    disabled={disableLeft}
+                    onClick={() => navigate(`${hrefLeft}`)}
+                >
+                    <span className='icon-absolute'>Prev</span>
+                </button>
+            )}
+            {!props.hideRight && (
+                <button
+                    className='btn btn-dark'
+                    disabled={disableRight}
+                    onClick={() => navigate(`${hrefRight}`)}
+                >
+                    <span>Next</span>
+                    <span className='icon icon-right-arrow '></span>
+                </button>
+            )}
         </div>
     );
 };

@@ -66,10 +66,22 @@ button {
     color: #dddddd;
 }
 .icon-right-arrow {
-    background-image: url('../public/static/imgs/right-arrow.png');
+    background-image: url('../public/static/imgs/right-arrow.svg');
 }
 .icon-left-arrow {
-    background-image: url('../public/static/imgs/left-arrow.png');
+    background-image: url('../public/static/imgs/left-arrow.svg');
+}
+.icon-absolute {
+    display: inline-block;
+    position: relative;
+}
+.icon-absolute::before {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: -16px;
+    content: url('../public/static/imgs/left-arrow.svg');
 }
 .margin {
     margin: 1rem;

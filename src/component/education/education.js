@@ -4,6 +4,7 @@ import { AppContext } from '../../context/appContext';
 import styles from './education.module.css';
 import { BasicTemplate } from '../resume-templates/basic/basic';
 import SideMenu from '../side-menu/side-menu';
+import Footer from '../footer/footer';
 export const Education = () => {
     const initialState = {
         degree: '',
@@ -47,27 +48,30 @@ export const Education = () => {
         setCurrentEducation(initialState);
     };
     return (
-        <div className='global-container'>
-            <SideMenu />
-            <div className='body-container'>
-                <div className={`form ${styles['experience-form']}`}>
-                    <div className={`${styles['experience-info']}`}>
-                        <h1>Add your Education</h1>
-                        <AddEducation
-                            currentEducation={currentEducation}
-                            handleStateChange={handleStateChange}
-                            saveEducation={saveEducation}
-                        />
+        <>
+            <div className='global-container'>
+                <SideMenu />
+                <div className='body-container'>
+                    <div className={`form ${styles['experience-form']}`}>
+                        <div className={`${styles['experience-info']}`}>
+                            <h1>Add your Education</h1>
+                            <AddEducation
+                                currentEducation={currentEducation}
+                                handleStateChange={handleStateChange}
+                                saveEducation={saveEducation}
+                            />
 
-                        <div className='btn-right'>
-                            <button className='btn btn-dark'>Next</button>
+                            <div className='btn-right'>
+                                <button className='btn btn-dark'>Next</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='preview'>
-                    <BasicTemplate></BasicTemplate>
+                    <div className='preview'>
+                        <BasicTemplate></BasicTemplate>
+                    </div>
                 </div>
             </div>
-        </div>
+            <Footer hrefLeft='/personal-info' hrefRight='/experience' />
+        </>
     );
 };

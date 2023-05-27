@@ -6,6 +6,7 @@ import { BasicTemplate } from '../resume-templates/basic/basic';
 import { Languages } from './language';
 import { Hobbies } from './hobbies';
 import SideMenu from '../side-menu/side-menu';
+import Footer from '../footer/footer';
 export const LanguagesAndHobbies = () => {
     const [hobbies, setHobbies] = useState([]);
     const navigate = useNavigate();
@@ -34,6 +35,7 @@ export const LanguagesAndHobbies = () => {
                     </div>
                 </div>
             </div>
+            <Footer hrefLeft='/skills' hrefRight='/about' />
         </>
     );
 };

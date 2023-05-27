@@ -123,7 +123,7 @@ export const PersonalInfo = (props) => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer hrefLeft='/template' hrefRight='/education' />
         </>
     );
 };

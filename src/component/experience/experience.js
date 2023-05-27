@@ -6,6 +6,7 @@ import styles from './experience.module.css';
 import { BasicTemplate } from '../resume-templates/basic/basic';
 import { useNavigate } from 'react-router-dom';
 import SideMenu from '../side-menu/side-menu';
+import Footer from '../footer/footer';
 export const Experience = (props) => {
     const initialState = {
         companyName: '',
@@ -89,6 +90,7 @@ export const Experience = (props) => {
                     </div>
                 </div>
             </div>
+            <Footer hrefLeft='/education' hrefRight='/skills' />
         </>
     );
 };
