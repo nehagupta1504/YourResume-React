@@ -18,6 +18,7 @@ export const Hobbies = (props) => {
                 className='input-field'
                 name='hobbies'
                 value={hobby}
+                placeholder='I love to read books'
                 onChange={(e) => onChangeHandler(e)}
             />
             <div className={`btn-right ${styles['btn-footer']}`}>

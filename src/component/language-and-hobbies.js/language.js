@@ -32,33 +32,34 @@ export const Languages = (props) => {
     return (
         <div className={``}>
             <h1>Language and Proficiency</h1>
-            <div className={`col-2`}>
-                <div className='text-field'>
-                    <input
-                        name='language'
-                        className={`input-field `}
-                        value={state?.language}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className='text-field '>
-                    <select
-                        name='percentage'
-                        id='percentage'
-                        className={`input-field `}
-                        value={state?.percentage}
-                        onChange={(e) => handleChange(e)}
-                    >
-                        <option disabled={true} value=''>
-                            Proficiency
-                        </option>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
-                    </select>
-                </div>
+            <div className='text-field'>
+                <label htmlFor='language'>Language</label>
+                <input
+                    name='language'
+                    className={`input-field `}
+                    placeholder='English'
+                    value={state?.language}
+                    onChange={handleChange}
+                />
+            </div>
+            <div className='text-field '>
+                <label htmlFor='jobDescription'>Proficiency</label>
+                <select
+                    name='percentage'
+                    id='percentage'
+                    className={`input-field `}
+                    value={state?.percentage}
+                    onChange={(e) => handleChange(e)}
+                >
+                    <option disabled={true} value=''>
+                        Select proficiency
+                    </option>
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
+                </select>
             </div>
             <div className={`btn-right ${styles['btn-footer']}`}>
                 <button

@@ -8,7 +8,9 @@ const Skills = () => {
             <div className='global-container'>
                 <SideMenu />
                 <div className='body-container'>
-                    <h1>Add Your Skills</h1>
+                    <div className='form'>
+                        <h1 className='heading'>Add Your Skills</h1>
+                    </div>
                 </div>
             </div>
             <Footer hrefLeft='/experience' hrefRight='/languages' />

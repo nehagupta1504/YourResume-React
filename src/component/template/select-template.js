@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import SideMenu from '../side-menu/side-menu';
 import Footer from '../footer/footer';
+import styles from './select-template.module.css';
 const SelectTemplate = () => {
     const navigate = useNavigate();
     return (
@@ -8,7 +9,9 @@ const SelectTemplate = () => {
             <div className='global-container'>
                 <SideMenu />
                 <div className='body-container'>
-                    <h1>Select Your Template</h1>
+                    <h1 className={styles['template-heading']}>
+                        Select Your Template
+                    </h1>
                     <div className='section-details_call-to-action bottom-btn'>
                         <button
                             className={`btn btn-dark margin  section-details_action`}

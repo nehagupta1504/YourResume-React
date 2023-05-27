@@ -150,7 +150,6 @@ button {
     position: relative;
     min-height: inherit;
     width: 100%;
-    justify-content: space-evenly;
 }
 
 .sidemenu-bg {
@@ -169,8 +168,15 @@ button {
 .submenu-list a {
     color: #dddddd;
 }
+.template-heading {
+    width: 100%;
+    padding: 2rem 2rem;
+    justify-content: flex-start;
+}
+
 .form {
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: 2rem 2rem;
     justify-content: flex-start;
@@ -207,7 +213,7 @@ button {
     border-bottom: 2px solid #698bae;
 }
 .input-field::placeholder {
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .form .text-area {
@@ -215,7 +221,6 @@ button {
     flex-direction: column;
 }
 .form .text-area__input {
-    height: 200px;
     padding-top: 5px;
 }
 .form .checkbox {
@@ -235,19 +240,11 @@ button {
 }
 
 .preview {
-    /* background-color: #dddddd; */
     flex: 1;
-    /* border: 16px solid #30475e; */
     color: black;
-    /* border-radius: 39px; */
-    padding: 2px;
     padding-top: 5rem;
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    margin-right: 40px;
-    /* max-height: 500px; */
-    /* overflow: scroll; */
+    justify-content: space-evenly;
 }
 .preview-field-value {
     color: #3e556d;
@@ -292,6 +289,7 @@ td {
 
 .preview-resume {
     display: flex;
+    flex: 1;
     justify-content: center;
     height: 800px;
     overflow: scroll;

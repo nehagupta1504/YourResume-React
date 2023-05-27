@@ -25,7 +25,7 @@ export const About = (props) => {
                 <div className='body-container'>
                     <div className={`form ${styles['about-form']}`}>
                         <div className={`${styles['experience-info']}`}>
-                            <h1>Add Something about yourself</h1>
+                            <h1>Add Something About Yourself</h1>
 
                             <div className='text-field text-area '>
                                 <textarea
@@ -33,7 +33,9 @@ export const About = (props) => {
                                     id='about'
                                     className='text-area__input input-field'
                                     name='about'
+                                    style={{ height: '129px' }}
                                     value={about}
+                                    placeholder='As a software developer with 2+ years of experience, I have developed a strong skill set in full stack development, specializing in a variety of technologies including HTML, CSS, and JavaScript, as well as popular frameworks such as React and Next.js. I am also highly proficient in GraphQL, Shopify, Node.js, MongoDB, styled components, Express.js, Handlebars, Firebase, and identity providers such as Auth0.'
                                     onChange={(e) => handleStateChange(e)}
                                     rows={3}
                                     cols={30}
